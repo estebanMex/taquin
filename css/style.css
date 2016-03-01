@@ -1,0 +1,26 @@
+body{
+    padding-top: 60px;
+}
+body .container{
+    /*min-width: 368px;*/
+}
+
+#game{
+    text-align: center;
+}
+/*.tile{*/
+    /*display: inline-block;*/
+    /*font-weight: bold;*/
+    /*font-size: 2em;*/
+    /*width: 23%;  !* 3 *!*/
+    /*height: 150px;*/
+    /*line-height: 150px;*/
+/*}*/
+
+.tile{
+    display: inline-block;
+    text-align: center;
+    font-size: 3em;
+    width: 23%;
+    margin: 0.5%;
+}

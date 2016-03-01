@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>taquin gamme</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Taquin Gamme</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Play now</h1>
+        <p class="lead">Cras justo odio, dapibus ac fa fermentum massa justo sit amet risus.</p>
+
+        <div id="game">
+            <!--<div class="btn btn-default tile">-</div>-->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2015 Company, Inc.</p>
+    </footer>
+
+</div> <!-- /container -->
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/underscore/underscore-min.js"></script>
+<script src="node_modules/backbone/backbone-min.js"></script>
+
+<script src="js/models/tile.js"></script>
+<script src="js/collections/tiles.js"></script>
+<script src="js/views/taquin.js"></script>
+<script src="js/views/tile.js"></script>
+<script src="js/routers/taquin.js"></script>
+<script src="main.js"></script>
+<script>
+    App.init();
+</script>
+</body>
+</html>
