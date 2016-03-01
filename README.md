@@ -1,14 +1,14 @@
 ## Synopsis
 
-Jeu de taquin, crée avec backbonejs + twitterr bostrap
+Jeu de taquin, crée avec backbonejs + twitter bootstrap
 
 ## Motivation
 
-Projet comprendre l'utilisation de backbonejs
+Projet pour comprendre l'utilisation de backbonejs
 
 ## Installation
 
-git clone url_depot .
+git clone https://github.com/estebanMex/taquin .
 
 ## API Reference
 
