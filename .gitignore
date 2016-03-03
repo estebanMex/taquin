@@ -1,5 +1,5 @@
-.idea/*
-node_modules/*
+# meta data webstorm #
+.idea/
 # App Specific #
 ################
 .ftppass
