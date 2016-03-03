@@ -1,6 +1,7 @@
 ## Synopsis
 
 Jeu de taquin, crée avec backbonejs + twitter bootstrap
+* Based on https://github.com/jhumbug/generator-static-app-skeleton
 
 ## Motivation
 
@@ -21,3 +22,6 @@ A mettre en place
 ## Contributors
 
 @estebanMex
+
+
+
