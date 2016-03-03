@@ -15,6 +15,11 @@ module.exports = Backbone.Model.extend({
 
     toggleVal: function () {
         var tempNumModel = this.toJSON().num;
+
+        console.log('position', this.get('position'));
+        console.log('test indexof', this._tilesAroundTileOfEmptyTile().indexOf(this.get('position')));
+        console.log('positions dispo', this._tilesAroundTileOfEmptyTile().sort())
+
         if (this._tilesAroundTileOfEmptyTile().indexOf(this.get('position')) !== -1) {
 
             this._emptyTile().set({num: tempNumModel});
@@ -32,26 +37,26 @@ module.exports = Backbone.Model.extend({
 
         var checkLeft = getnot([3, 7, 11, 15]);
         var checkRight = getnot([0, 4, 8, 12]);
-        var tilesAroundValides = [];
+        var tilesAroundValids = [];
 
 
         if (valid(top)) {
-            tilesAroundValides.push(top);
+            tilesAroundValids.push(top);
         }
 
         if (valid(bottom)) {
-            tilesAroundValides.push(bottom);
+            tilesAroundValids.push(bottom);
         }
 
         if (valid(left) && checkLeft(left)) {
-            tilesAroundValides.push(left);
+            tilesAroundValids.push(left);
         }
 
         if (valid(right) && checkRight(right)) {
-            tilesAroundValides.push(right);
+            tilesAroundValids.push(right);
         }
 
-        return tilesAroundValides;
+        return tilesAroundValids;
 
         // only des vals includs in 0 and nbTiles
         function valid(val) {
@@ -71,7 +76,7 @@ module.exports = Backbone.Model.extend({
             return function (val) {
                 var output;
                 if (toIgnore.indexOf(val) === -1) {
-                    return val;
+                    return (val == 0) ? 1 : val;
                 }
             }
         }
