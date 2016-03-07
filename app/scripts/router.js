@@ -1,6 +1,8 @@
 'use strict';
 
+
 var Backbone = require('backbone');
+var _ = require('lodash');
 require('jquery');
 Backbone.$ = $;
 
@@ -9,6 +11,8 @@ var bbModel = require('./models/bb');
 
 var taquinView = require('./views/taquin');
 var taquinModel = require('./models/taquin');
+
+Backbone.pubSub = _.extend({}, Backbone.Events);
 
 module.exports = Backbone.Router.extend({
 

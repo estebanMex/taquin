@@ -15,14 +15,22 @@ module.exports = Backbone.View.extend({
 
     template: require('../templates/taquin'),
 
+    toggleVal: function (modelClicked) {
+
+    },
+
     initialize: function () {
+        var _self = this;
+        var tiles = [];
+        var grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        grid.splice(0, 0, '&nbsp;');
 
         this._tileView = TileView;
         this._tilesCollection = new TilesCollection;
 
-        var tiles = [];
-        var grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-        grid.splice(0, 0, '&nbsp;');
+        Backbone.pubSub.on('tile:clicked', function (modelClicked) {
+            _self._tilesCollection.toggleVal(modelClicked);
+        });
 
         // hydrate collection
         _.each(grid, function (curr, index) {
@@ -37,7 +45,6 @@ module.exports = Backbone.View.extend({
     render: function () {
         var tiles = [];
         this.$el.html(this.template(this.model.toJSON()));
-
 
         var targetTilesElement = this.$el.find('.explantion');
 

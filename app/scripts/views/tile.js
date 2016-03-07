@@ -12,17 +12,18 @@ module.exports = Backbone.View.extend({
 
     template: require('../templates/tile'),
 
+    initialize: function () {
+        this.listenTo(this.model, "change", this.render);
+        
+        this.render();
+    },
+
     events: {
         'click': 'toggleVal'
     },
 
     toggleVal: function () {
-        this.model.toggleVal();
-    },
-
-    initialize: function () {
-        this.listenTo(this.model, "change", this.render);
-        this.render();
+        Backbone.pubSub.trigger('tile:clicked', this.model);
     },
 
     render: function () {
